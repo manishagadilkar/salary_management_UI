@@ -1,0 +1,272 @@
+.salary-insights-container {
+  width: 100%;
+}
+
+.insights-header {
+  margin-bottom: 30px;
+}
+
+.insights-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  color: var(--gray-600);
+  font-size: 14px;
+  margin: 0;
+}
+
+.filters-section {
+  background-color: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+  flex: 1;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: var(--gray-700);
+  font-size: 14px;
+}
+
+.filter-group select {
+  padding: 10px 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filter-group select:disabled {
+  background-color: var(--gray-100);
+  cursor: not-allowed;
+  color: var(--gray-500);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-apply,
+.btn-reset {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-apply {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-apply:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.btn-reset {
+  background-color: var(--gray-300);
+  color: var(--gray-700);
+}
+
+.btn-reset:hover:not(:disabled) {
+  background-color: var(--gray-400);
+}
+
+.btn-apply:disabled,
+.btn-reset:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.insights-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.insight-card {
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  box-shadow: var(--box-shadow-md);
+  transform: translateY(-2px);
+}
+
+.insight-card.highlight {
+  border: 2px solid var(--primary-color);
+  background-color: #eff6ff;
+}
+
+.card-icon {
+  font-size: 32px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.insights-table-section {
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  padding: 25px;
+}
+
+.insights-table-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 20px 0;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-200);
+}
+
+.insights-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.insights-table thead {
+  background-color: var(--gray-50);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.insights-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--gray-700);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.insights-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+  color: var(--gray-700);
+}
+
+.insights-table tbody tr:hover {
+  background-color: var(--gray-50);
+}
+
+.insights-table td.salary-cell {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.insights-table td.salary-cell.highlight {
+  background-color: #eff6ff;
+  color: var(--primary-dark);
+  border-radius: 4px;
+}
+
+.insights-table td.centered {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+  }
+
+  .btn-apply,
+  .btn-reset {
+    width: 100%;
+  }
+
+  .insights-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-table {
+    font-size: 12px;
+  }
+
+  .insights-table th,
+  .insights-table td {
+    padding: 8px;
+  }
+
+  .metric-value {
+    font-size: 24px;
+  }
+}
